@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Changes working directory of script to directory where the script is located
+cd "$(dirname "$0")"
+
 # Clone the repository of the student submission to a well-known directory name (provided in starter code)
 rm -rf student-submission
 git clone "$1" student-submission
