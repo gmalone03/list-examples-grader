@@ -1,4 +1,5 @@
 #!/bin/bash
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
 # Changes working directory of script to directory where the script is located
 cd "$(dirname "$0")"
