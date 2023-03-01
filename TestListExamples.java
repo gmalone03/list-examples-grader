@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.ArrayList;
 
 
-public class ListExamplesTests {
+public class TestListExamples {
 	@Test (timeout = 500)
 	public void testMerge1() {
     		List<String> l1 = new ArrayList<String>(Arrays.asList("x", "y"));
