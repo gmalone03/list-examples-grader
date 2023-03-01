@@ -5,8 +5,6 @@ rm -rf student-submission
 git clone $1 student-submission
 echo 'Finished cloning'
 
-# cp student-submission/ListExamples.java ./
-
 # Check that the student code has the correct file submitted. If they didn’t, detect and give helpful feedback about it.
 if [ ! -f student-submission/ListExamples.java ]; then
   echo "Error: 'ListExamples.java' file not found in submission. Please check the file name and try again."
@@ -14,7 +12,7 @@ if [ ! -f student-submission/ListExamples.java ]; then
 fi
 
 # Copy the test file into the same directory as the student code
-cp TestListExamples.java student-submission/
+cp student-submission/ListExamples.java ./
 
 # Compile your tests and the student’s code from the appropriate directory with the appropriate classpath commands. If the compilation fails, detect and give helpful feedback about it.
 javac -cp $CPATH *.java
