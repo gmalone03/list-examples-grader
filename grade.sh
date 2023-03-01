@@ -7,7 +7,7 @@ echo 'Finished cloning'
 
 cp student-submission/ListExamples.java ./
 # javac -cp $CPATH *.java
-javac -cp lib/*:.
+javac -cp lib/*:. TestListExamples.java
 # java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
 java -cp lib/*:. org.junit.runner.JUnitCore TestListExamples
 
