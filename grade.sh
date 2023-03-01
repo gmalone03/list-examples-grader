@@ -16,6 +16,17 @@ cp student-submission/ListExamples.java ./
 
 # Compile your tests and the student’s code from the appropriate directory with the appropriate classpath commands. If the compilation fails, detect and give helpful feedback about it.
 javac -cp $CPATH *.java
-java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
-# Run the tests and report the grade based on the JUnit output.
 
+# Compile ListExamples.java
+javac ListExamples.java
+
+# Check if the compilation was successful
+if [ $? -eq 0 ]; then
+  echo "Compilation successful!"
+else
+  echo "Compilation failed. Here are the errors:"
+  javac ListExamples.java 2>&1 | grep -v "^Note: "
+fi
+
+# Run the tests and report the grade based on the JUnit output.
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
