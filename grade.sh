@@ -7,9 +7,9 @@ echo 'Finished cloning'
 
 cp student-submission/ListExamples.java ./
 # javac -cp $CPATH *.java
-javac -cp lib/*:. TestListExamples.java
+javac -cp lib/*:. student-submission/TestListExamples.java
 # java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
-java -cp lib/*:. org.junit.runner.JUnitCore TestListExamples
+java -cp lib/*:. org.junit.runner.JUnitCore student-submission/TestListExamples
 
 
 # Check that the student code has the correct file submitted. If they didn’t, detect and give helpful feedback about it.
